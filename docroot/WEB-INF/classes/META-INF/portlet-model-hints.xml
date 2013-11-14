@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.support.standup.model.GlobalInformation">
+		<field name="globalInformationId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="date" type="Date" />
+		<field name="message" type="String" />
+		<field name="display" type="Integer" />
+		<field name="status" type="Integer" />
+	</model>
+</model-hints>
