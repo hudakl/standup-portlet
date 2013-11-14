@@ -1138,7 +1138,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public List<GlobalInformation> findByDisplay(Integer display)
+	public List<GlobalInformation> findByDisplay(int display)
 		throws SystemException {
 		return findByDisplay(display, QueryUtil.ALL_POS, QueryUtil.ALL_POS, null);
 	}
@@ -1157,8 +1157,8 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public List<GlobalInformation> findByDisplay(Integer display, int start,
-		int end) throws SystemException {
+	public List<GlobalInformation> findByDisplay(int display, int start, int end)
+		throws SystemException {
 		return findByDisplay(display, start, end, null);
 	}
 
@@ -1177,7 +1177,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public List<GlobalInformation> findByDisplay(Integer display, int start,
+	public List<GlobalInformation> findByDisplay(int display, int start,
 		int end, OrderByComparator orderByComparator) throws SystemException {
 		boolean pagination = true;
 		FinderPath finderPath = null;
@@ -1199,7 +1199,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 
 		if ((list != null) && !list.isEmpty()) {
 			for (GlobalInformation globalInformation : list) {
-				if (!Validator.equals(display, globalInformation.getDisplay())) {
+				if ((display != globalInformation.getDisplay())) {
 					list = null;
 
 					break;
@@ -1242,7 +1242,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 
 				QueryPos qPos = QueryPos.getInstance(q);
 
-				qPos.add(display.intValue());
+				qPos.add(display);
 
 				if (!pagination) {
 					list = (List<GlobalInformation>)QueryUtil.list(q,
@@ -1284,7 +1284,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public GlobalInformation findByDisplay_First(Integer display,
+	public GlobalInformation findByDisplay_First(int display,
 		OrderByComparator orderByComparator)
 		throws NoSuchGlobalInformationException, SystemException {
 		GlobalInformation globalInformation = fetchByDisplay_First(display,
@@ -1315,7 +1315,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public GlobalInformation fetchByDisplay_First(Integer display,
+	public GlobalInformation fetchByDisplay_First(int display,
 		OrderByComparator orderByComparator) throws SystemException {
 		List<GlobalInformation> list = findByDisplay(display, 0, 1,
 				orderByComparator);
@@ -1337,7 +1337,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public GlobalInformation findByDisplay_Last(Integer display,
+	public GlobalInformation findByDisplay_Last(int display,
 		OrderByComparator orderByComparator)
 		throws NoSuchGlobalInformationException, SystemException {
 		GlobalInformation globalInformation = fetchByDisplay_Last(display,
@@ -1368,7 +1368,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public GlobalInformation fetchByDisplay_Last(Integer display,
+	public GlobalInformation fetchByDisplay_Last(int display,
 		OrderByComparator orderByComparator) throws SystemException {
 		int count = countByDisplay(display);
 
@@ -1398,7 +1398,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 	 */
 	@Override
 	public GlobalInformation[] findByDisplay_PrevAndNext(
-		long globalInformationId, Integer display,
+		long globalInformationId, int display,
 		OrderByComparator orderByComparator)
 		throws NoSuchGlobalInformationException, SystemException {
 		GlobalInformation globalInformation = findByPrimaryKey(globalInformationId);
@@ -1429,7 +1429,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 	}
 
 	protected GlobalInformation getByDisplay_PrevAndNext(Session session,
-		GlobalInformation globalInformation, Integer display,
+		GlobalInformation globalInformation, int display,
 		OrderByComparator orderByComparator, boolean previous) {
 		StringBundler query = null;
 
@@ -1513,7 +1513,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 
 		QueryPos qPos = QueryPos.getInstance(q);
 
-		qPos.add(display.intValue());
+		qPos.add(display);
 
 		if (orderByComparator != null) {
 			Object[] values = orderByComparator.getOrderByConditionValues(globalInformation);
@@ -1540,7 +1540,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public void removeByDisplay(Integer display) throws SystemException {
+	public void removeByDisplay(int display) throws SystemException {
 		for (GlobalInformation globalInformation : findByDisplay(display,
 				QueryUtil.ALL_POS, QueryUtil.ALL_POS, null)) {
 			remove(globalInformation);
@@ -1555,7 +1555,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 	 * @throws SystemException if a system exception occurred
 	 */
 	@Override
-	public int countByDisplay(Integer display) throws SystemException {
+	public int countByDisplay(int display) throws SystemException {
 		FinderPath finderPath = FINDER_PATH_COUNT_BY_DISPLAY;
 
 		Object[] finderArgs = new Object[] { display };
@@ -1581,7 +1581,7 @@ public class GlobalInformationPersistenceImpl extends BasePersistenceImpl<Global
 
 				QueryPos qPos = QueryPos.getInstance(q);
 
-				qPos.add(display.intValue());
+				qPos.add(display);
 
 				count = (Long)q.uniqueResult();
 

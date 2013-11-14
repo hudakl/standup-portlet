@@ -440,8 +440,7 @@ public class GlobalInformationUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static java.util.List<com.liferay.support.standup.model.GlobalInformation> findByDisplay(
-		java.lang.Integer display)
-		throws com.liferay.portal.kernel.exception.SystemException {
+		int display) throws com.liferay.portal.kernel.exception.SystemException {
 		return getPersistence().findByDisplay(display);
 	}
 
@@ -459,7 +458,7 @@ public class GlobalInformationUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static java.util.List<com.liferay.support.standup.model.GlobalInformation> findByDisplay(
-		java.lang.Integer display, int start, int end)
+		int display, int start, int end)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		return getPersistence().findByDisplay(display, start, end);
 	}
@@ -479,7 +478,7 @@ public class GlobalInformationUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static java.util.List<com.liferay.support.standup.model.GlobalInformation> findByDisplay(
-		java.lang.Integer display, int start, int end,
+		int display, int start, int end,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		return getPersistence()
@@ -496,7 +495,7 @@ public class GlobalInformationUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.liferay.support.standup.model.GlobalInformation findByDisplay_First(
-		java.lang.Integer display,
+		int display,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.liferay.support.standup.NoSuchGlobalInformationException {
@@ -512,7 +511,7 @@ public class GlobalInformationUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.liferay.support.standup.model.GlobalInformation fetchByDisplay_First(
-		java.lang.Integer display,
+		int display,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		return getPersistence().fetchByDisplay_First(display, orderByComparator);
@@ -528,7 +527,7 @@ public class GlobalInformationUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.liferay.support.standup.model.GlobalInformation findByDisplay_Last(
-		java.lang.Integer display,
+		int display,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.liferay.support.standup.NoSuchGlobalInformationException {
@@ -544,7 +543,7 @@ public class GlobalInformationUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.liferay.support.standup.model.GlobalInformation fetchByDisplay_Last(
-		java.lang.Integer display,
+		int display,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		return getPersistence().fetchByDisplay_Last(display, orderByComparator);
@@ -561,7 +560,7 @@ public class GlobalInformationUtil {
 	* @throws SystemException if a system exception occurred
 	*/
 	public static com.liferay.support.standup.model.GlobalInformation[] findByDisplay_PrevAndNext(
-		long globalInformationId, java.lang.Integer display,
+		long globalInformationId, int display,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.liferay.support.standup.NoSuchGlobalInformationException {
@@ -576,7 +575,7 @@ public class GlobalInformationUtil {
 	* @param display the display
 	* @throws SystemException if a system exception occurred
 	*/
-	public static void removeByDisplay(java.lang.Integer display)
+	public static void removeByDisplay(int display)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		getPersistence().removeByDisplay(display);
 	}
@@ -588,7 +587,7 @@ public class GlobalInformationUtil {
 	* @return the number of matching global informations
 	* @throws SystemException if a system exception occurred
 	*/
-	public static int countByDisplay(java.lang.Integer display)
+	public static int countByDisplay(int display)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		return getPersistence().countByDisplay(display);
 	}

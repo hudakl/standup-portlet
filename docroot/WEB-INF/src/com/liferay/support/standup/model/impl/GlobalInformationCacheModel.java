@@ -100,8 +100,8 @@ public class GlobalInformationCacheModel implements CacheModel<GlobalInformation
 		userId = objectInput.readLong();
 		date = objectInput.readLong();
 		message = objectInput.readUTF();
-		display = objectInput.readInteger();
-		status = objectInput.readInteger();
+		display = objectInput.readInt();
+		status = objectInput.readInt();
 	}
 
 	@Override
@@ -120,8 +120,8 @@ public class GlobalInformationCacheModel implements CacheModel<GlobalInformation
 			objectOutput.writeUTF(message);
 		}
 
-		objectOutput.writeInteger(display);
-		objectOutput.writeInteger(status);
+		objectOutput.writeInt(display);
+		objectOutput.writeInt(status);
 	}
 
 	public long globalInformationId;
@@ -130,6 +130,6 @@ public class GlobalInformationCacheModel implements CacheModel<GlobalInformation
 	public long userId;
 	public long date;
 	public String message;
-	public Integer display;
-	public Integer status;
+	public int display;
+	public int status;
 }

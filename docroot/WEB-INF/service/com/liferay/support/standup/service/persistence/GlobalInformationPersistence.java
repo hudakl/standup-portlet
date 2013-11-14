@@ -321,8 +321,7 @@ public interface GlobalInformationPersistence extends BasePersistence<GlobalInfo
 	* @throws SystemException if a system exception occurred
 	*/
 	public java.util.List<com.liferay.support.standup.model.GlobalInformation> findByDisplay(
-		java.lang.Integer display)
-		throws com.liferay.portal.kernel.exception.SystemException;
+		int display) throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**
 	* Returns a range of all the global informations where display = &#63;.
@@ -338,7 +337,7 @@ public interface GlobalInformationPersistence extends BasePersistence<GlobalInfo
 	* @throws SystemException if a system exception occurred
 	*/
 	public java.util.List<com.liferay.support.standup.model.GlobalInformation> findByDisplay(
-		java.lang.Integer display, int start, int end)
+		int display, int start, int end)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**
@@ -356,7 +355,7 @@ public interface GlobalInformationPersistence extends BasePersistence<GlobalInfo
 	* @throws SystemException if a system exception occurred
 	*/
 	public java.util.List<com.liferay.support.standup.model.GlobalInformation> findByDisplay(
-		java.lang.Integer display, int start, int end,
+		int display, int start, int end,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
@@ -370,7 +369,7 @@ public interface GlobalInformationPersistence extends BasePersistence<GlobalInfo
 	* @throws SystemException if a system exception occurred
 	*/
 	public com.liferay.support.standup.model.GlobalInformation findByDisplay_First(
-		java.lang.Integer display,
+		int display,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.liferay.support.standup.NoSuchGlobalInformationException;
@@ -384,7 +383,7 @@ public interface GlobalInformationPersistence extends BasePersistence<GlobalInfo
 	* @throws SystemException if a system exception occurred
 	*/
 	public com.liferay.support.standup.model.GlobalInformation fetchByDisplay_First(
-		java.lang.Integer display,
+		int display,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
@@ -398,7 +397,7 @@ public interface GlobalInformationPersistence extends BasePersistence<GlobalInfo
 	* @throws SystemException if a system exception occurred
 	*/
 	public com.liferay.support.standup.model.GlobalInformation findByDisplay_Last(
-		java.lang.Integer display,
+		int display,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.liferay.support.standup.NoSuchGlobalInformationException;
@@ -412,7 +411,7 @@ public interface GlobalInformationPersistence extends BasePersistence<GlobalInfo
 	* @throws SystemException if a system exception occurred
 	*/
 	public com.liferay.support.standup.model.GlobalInformation fetchByDisplay_Last(
-		java.lang.Integer display,
+		int display,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
@@ -427,7 +426,7 @@ public interface GlobalInformationPersistence extends BasePersistence<GlobalInfo
 	* @throws SystemException if a system exception occurred
 	*/
 	public com.liferay.support.standup.model.GlobalInformation[] findByDisplay_PrevAndNext(
-		long globalInformationId, java.lang.Integer display,
+		long globalInformationId, int display,
 		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
 		throws com.liferay.portal.kernel.exception.SystemException,
 			com.liferay.support.standup.NoSuchGlobalInformationException;
@@ -438,7 +437,7 @@ public interface GlobalInformationPersistence extends BasePersistence<GlobalInfo
 	* @param display the display
 	* @throws SystemException if a system exception occurred
 	*/
-	public void removeByDisplay(java.lang.Integer display)
+	public void removeByDisplay(int display)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**
@@ -448,7 +447,7 @@ public interface GlobalInformationPersistence extends BasePersistence<GlobalInfo
 	* @return the number of matching global informations
 	* @throws SystemException if a system exception occurred
 	*/
-	public int countByDisplay(java.lang.Integer display)
+	public int countByDisplay(int display)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**
