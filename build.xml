@@ -2,5 +2,5 @@
 <!DOCTYPE project>
 
 <project name="standup-portlet" basedir="." default="deploy">
-	<import file="/home/jdaniel/liferay/lds/6210/portlets/build-common-portlet.xml" />
+	<import file="/c:/liferay_development/repositories/liferay-plugins-ee/portlets/build-common-portlet.xml" />
 </project>
