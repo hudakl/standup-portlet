@@ -8,7 +8,7 @@
 	<entity name="GlobalInformation" local-service="true" remote-service="true" cache-enabled="true">
 
 		<!-- Primary key column -->
-		<column name="id" type="long" primary="true" />
+		<column name="globalInformationId" type="long" primary="true" />
 
 		<!-- Foreign key columns -->
 		<column name="companyId" type="long" />
