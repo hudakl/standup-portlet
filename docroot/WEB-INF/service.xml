@@ -18,8 +18,8 @@
 		<!-- Other columns -->
 		<column name="date" type="Date" />
 		<column name="message" type="String" />
-		<column name="display" type="Integer" />
-		<column name="status" type="Integer" />
+		<column name="display" type="int" />
+		<column name="status" type="int" />
 		
 		<!-- Sort order -->
 		<order by="asc">
