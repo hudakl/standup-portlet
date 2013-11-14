@@ -142,19 +142,19 @@ public class GlobalInformationSoap implements Serializable {
 		_message = message;
 	}
 
-	public Integer getDisplay() {
+	public int getDisplay() {
 		return _display;
 	}
 
-	public void setDisplay(Integer display) {
+	public void setDisplay(int display) {
 		_display = display;
 	}
 
-	public Integer getStatus() {
+	public int getStatus() {
 		return _status;
 	}
 
-	public void setStatus(Integer status) {
+	public void setStatus(int status) {
 		_status = status;
 	}
 
@@ -164,6 +164,6 @@ public class GlobalInformationSoap implements Serializable {
 	private long _userId;
 	private Date _date;
 	private String _message;
-	private Integer _display;
-	private Integer _status;
+	private int _display;
+	private int _status;
 }

@@ -8,7 +8,7 @@
 		<field name="userId" type="long" />
 		<field name="date" type="Date" />
 		<field name="message" type="String" />
-		<field name="display" type="Integer" />
-		<field name="status" type="Integer" />
+		<field name="display" type="int" />
+		<field name="status" type="int" />
 	</model>
 </model-hints>

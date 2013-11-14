@@ -289,19 +289,19 @@ public class GlobalInformationClp extends BaseModelImpl<GlobalInformation>
 	}
 
 	@Override
-	public Integer getDisplay() {
+	public int getDisplay() {
 		return _display;
 	}
 
 	@Override
-	public void setDisplay(Integer display) {
+	public void setDisplay(int display) {
 		_display = display;
 
 		if (_globalInformationRemoteModel != null) {
 			try {
 				Class<?> clazz = _globalInformationRemoteModel.getClass();
 
-				Method method = clazz.getMethod("setDisplay", Integer.class);
+				Method method = clazz.getMethod("setDisplay", int.class);
 
 				method.invoke(_globalInformationRemoteModel, display);
 			}
@@ -312,19 +312,19 @@ public class GlobalInformationClp extends BaseModelImpl<GlobalInformation>
 	}
 
 	@Override
-	public Integer getStatus() {
+	public int getStatus() {
 		return _status;
 	}
 
 	@Override
-	public void setStatus(Integer status) {
+	public void setStatus(int status) {
 		_status = status;
 
 		if (_globalInformationRemoteModel != null) {
 			try {
 				Class<?> clazz = _globalInformationRemoteModel.getClass();
 
-				Method method = clazz.getMethod("setStatus", Integer.class);
+				Method method = clazz.getMethod("setStatus", int.class);
 
 				method.invoke(_globalInformationRemoteModel, status);
 			}
@@ -535,7 +535,7 @@ public class GlobalInformationClp extends BaseModelImpl<GlobalInformation>
 	private String _userUuid;
 	private Date _date;
 	private String _message;
-	private Integer _display;
-	private Integer _status;
+	private int _display;
+	private int _status;
 	private BaseModel<?> _globalInformationRemoteModel;
 }

@@ -165,28 +165,28 @@ public interface GlobalInformationModel extends BaseModel<GlobalInformation> {
 	 *
 	 * @return the display of this global information
 	 */
-	public Integer getDisplay();
+	public int getDisplay();
 
 	/**
 	 * Sets the display of this global information.
 	 *
 	 * @param display the display of this global information
 	 */
-	public void setDisplay(Integer display);
+	public void setDisplay(int display);
 
 	/**
 	 * Returns the status of this global information.
 	 *
 	 * @return the status of this global information
 	 */
-	public Integer getStatus();
+	public int getStatus();
 
 	/**
 	 * Sets the status of this global information.
 	 *
 	 * @param status the status of this global information
 	 */
-	public void setStatus(Integer status);
+	public void setStatus(int status);
 
 	@Override
 	public boolean isNew();

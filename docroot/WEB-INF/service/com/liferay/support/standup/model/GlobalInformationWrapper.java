@@ -281,7 +281,7 @@ public class GlobalInformationWrapper implements GlobalInformation,
 	* @return the display of this global information
 	*/
 	@Override
-	public java.lang.Integer getDisplay() {
+	public int getDisplay() {
 		return _globalInformation.getDisplay();
 	}
 
@@ -291,7 +291,7 @@ public class GlobalInformationWrapper implements GlobalInformation,
 	* @param display the display of this global information
 	*/
 	@Override
-	public void setDisplay(java.lang.Integer display) {
+	public void setDisplay(int display) {
 		_globalInformation.setDisplay(display);
 	}
 
@@ -301,7 +301,7 @@ public class GlobalInformationWrapper implements GlobalInformation,
 	* @return the status of this global information
 	*/
 	@Override
-	public java.lang.Integer getStatus() {
+	public int getStatus() {
 		return _globalInformation.getStatus();
 	}
 
@@ -311,7 +311,7 @@ public class GlobalInformationWrapper implements GlobalInformation,
 	* @param status the status of this global information
 	*/
 	@Override
-	public void setStatus(java.lang.Integer status) {
+	public void setStatus(int status) {
 		_globalInformation.setStatus(status);
 	}
 
@@ -379,7 +379,8 @@ public class GlobalInformationWrapper implements GlobalInformation,
 	}
 
 	@Override
-	public int compareTo(GlobalInformation globalInformation) {
+	public int compareTo(
+		com.liferay.support.standup.model.GlobalInformation globalInformation) {
 		return _globalInformation.compareTo(globalInformation);
 	}
 
@@ -389,17 +390,17 @@ public class GlobalInformationWrapper implements GlobalInformation,
 	}
 
 	@Override
-	public com.liferay.portal.model.CacheModel<GlobalInformation> toCacheModel() {
+	public com.liferay.portal.model.CacheModel<com.liferay.support.standup.model.GlobalInformation> toCacheModel() {
 		return _globalInformation.toCacheModel();
 	}
 
 	@Override
-	public GlobalInformation toEscapedModel() {
+	public com.liferay.support.standup.model.GlobalInformation toEscapedModel() {
 		return new GlobalInformationWrapper(_globalInformation.toEscapedModel());
 	}
 
 	@Override
-	public GlobalInformation toUnescapedModel() {
+	public com.liferay.support.standup.model.GlobalInformation toUnescapedModel() {
 		return new GlobalInformationWrapper(_globalInformation.toUnescapedModel());
 	}
 

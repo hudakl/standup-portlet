@@ -350,12 +350,12 @@ public class GlobalInformationModelImpl extends BaseModelImpl<GlobalInformation>
 
 	@JSON
 	@Override
-	public Integer getDisplay() {
+	public int getDisplay() {
 		return _display;
 	}
 
 	@Override
-	public void setDisplay(Integer display) {
+	public void setDisplay(int display) {
 		_columnBitmask |= DISPLAY_COLUMN_BITMASK;
 
 		if (!_setOriginalDisplay) {
@@ -367,18 +367,18 @@ public class GlobalInformationModelImpl extends BaseModelImpl<GlobalInformation>
 		_display = display;
 	}
 
-	public Integer getOriginalDisplay() {
+	public int getOriginalDisplay() {
 		return _originalDisplay;
 	}
 
 	@JSON
 	@Override
-	public Integer getStatus() {
+	public int getStatus() {
 		return _status;
 	}
 
 	@Override
-	public void setStatus(Integer status) {
+	public void setStatus(int status) {
 		_status = status;
 	}
 
@@ -605,10 +605,10 @@ public class GlobalInformationModelImpl extends BaseModelImpl<GlobalInformation>
 	private Date _date;
 	private Date _originalDate;
 	private String _message;
-	private Integer _display;
-	private Integer _originalDisplay;
+	private int _display;
+	private int _originalDisplay;
 	private boolean _setOriginalDisplay;
-	private Integer _status;
+	private int _status;
 	private long _columnBitmask;
 	private GlobalInformation _escapedModel;
 }
